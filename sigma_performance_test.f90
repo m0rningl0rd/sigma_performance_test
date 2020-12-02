@@ -13,14 +13,17 @@ program sigma_performance_test
   real :: A(3,3) = 0., A1(3,3) = 0., A2(3,3) = 0., sigma(3) = 0., start, finish
   integer :: k, l_work
 
+  ! Either use a pre-defined matrix
   A1 = reshape( (/1., 2., 3.,     &
                   4., 5., 6.,     &
                   7., 8., 9./),   & 
                   shape(A1),      & 
                   order=(/2,1/) )
 
+  ! Or create a random one based on pre-defined seed
   call random_number(A2)
   
+  ! Computations will use whatever is contained in "A"
   A = A2
 
   write(*,*) "*** Computing singular values of matrix A_ij: ***"
