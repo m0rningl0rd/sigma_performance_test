@@ -2,7 +2,7 @@
 A simple FORTRAN test to assess performance of several methods to compute singular values of a 3x3 matrix.
 
 Sample output with ```ifort``` 18.0.5 using ```-O2 -mkl=sequential -fp-model precise -static-intel```
-```bash
+```
  *** Computing singular values of matrix A_ij: ***
  ---------------------------------------------------
 | 0.39208680E-06 | 0.66691446E+00 | 0.33535504E+00 |
@@ -29,7 +29,7 @@ Time elapsed:  63.284 ms.
 ```
 
 Sample output with ```ifort``` 18.0.5 using ```-O3 -mkl=sequential -fp-model fast=2 -no-prec-div -static-intel```
-```bash
+```
   *** Computing singular values of matrix A_ij: ***
  ---------------------------------------------------
 | 0.39208680E-06 | 0.66691446E+00 | 0.33535504E+00 |
